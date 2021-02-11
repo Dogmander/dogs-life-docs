@@ -1,0 +1,29 @@
+HEADER - 12 bytes
+
+0x00    Int    Count1: Number of textures ?
+0x04    Int    Count2: Number of ?
+0x08    Int    Count3: Number of entries in Table 1
+
+TABLE 1 - Count3 * 0x14
+
+TABLE 2 - Int Count + (Count * 0x20)
+
+TABLE 3 - Count1 * 0x40
+
+TABLE 4 - Count3 * 0x28
+
+[some other table(s)]
+
+TABLE - Int Count + (Count * 0x8)
+
+TABLE - Count3 * 0x30
+
+TABLE - (Table 2 count) * 0x10
+
+TABLE - Count1 * 0x64 (some entries are variable size) [This is a texture info table, with widths, heights, and other info]
+
+TABLE - Count3 * 0x10
+
+[some other table]
+
+Followed by textures, meshes and other data
