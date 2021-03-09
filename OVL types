@@ -1,0 +1,13 @@
+Multiple types of OVL exist in Dog's Life, each with slightly different formats and uses.
+
+Localization OVL:
+
+These are OVL files used for different languages in the game. 
+The filename of these define what language and parent OVL they are for. 
+The filename layout is as followed:
+(Parent OVL #)l(Language #).ovl
+A similar format to this also exists, which has a d after the parent OVL number. The purpose and use of these are unknown, as most files which are in this format do not contain any data.
+This format is as followed:
+(Parent OVL #)d(#)l(Language #).ovl
+
+finish later
