@@ -1,0 +1,32 @@
+This file contains a list detailing what each OVL is for and their name and OVL number.
+(This info is taken from the NTSC-U version of Dog's Life [SLUS-21018], other versions may be different)
+
+1 - Root
+
+2 - NullBanners
+
+3 - NullSection
+
+4 - Banners
+
+5 - Gem (This contains the model, texture, creature, and animation data for Jake)
+
+6 - NullMain
+
+7 - Main
+
+8 - SaveIsland (This contains data for SaveIsland, the area for loading a game save)
+
+9 - Hicksville (This contains common data used for Hicksville)
+
+10
+
+11 -
+
+12 - Hicksville_Farmhouse (This contains data used for the Hicksville Farmhouse level)
+
+13
+
+14
+
+15 - Hicksville_VillageHouses (This contains data used for the Hicksville Village Houses level)
