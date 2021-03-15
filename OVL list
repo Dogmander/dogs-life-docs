@@ -21,7 +21,7 @@ This file contains a list detailing what each OVL is for and their name and OVL 
 
 10
 
-11 - Town (This contains common data for Town)
+11 - Town (This contains common data for Boom City)
 
 12 - Hicksville_Farmhouse (This contains data used for the Hicksville Farmhouse level)
 
@@ -57,11 +57,11 @@ This file contains a list detailing what each OVL is for and their name and OVL 
 
 28 - Town_DogPound (This contains data for Boom City Dogpound)
 
-29
+29 - Town_Centre (This contains data for Boom City Centre)
 
 30 - Town_Finale (This contains data for Boom City Finale)
 
-31
+31 - Town_Finale_Cutscene (This contains data for the cutscene for Finale)
 
 32
 
