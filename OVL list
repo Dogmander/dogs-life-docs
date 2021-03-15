@@ -21,7 +21,7 @@ This file contains a list detailing what each OVL is for and their name and OVL 
 
 10
 
-11 -
+11 - Town (This contains common data for Town)
 
 12 - Hicksville_Farmhouse (This contains data used for the Hicksville Farmhouse level)
 
@@ -30,3 +30,41 @@ This file contains a list detailing what each OVL is for and their name and OVL 
 14
 
 15 - Hicksville_VillageHouses (This contains data used for the Hicksville Village Houses level)
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28 - Town_DogPound (This contains data for Boom City Dogpound
+
+29
+
+30 - Town_Finale (This contains data for Boom City Finale)
+
+31
+
+32
+
+33 - SI_LevelImage (Save Island Level Image)
+
+34 - H_F_LevelImage (Hicksville Farmhouse Level Image) 
