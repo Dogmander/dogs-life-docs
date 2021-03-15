@@ -1,0 +1,29 @@
+Header - 12 bytes:
+
+0x00    Short    Always seems to be 0xFFFF
+0x02    UShort    Number of face sections in this mesh
+0x04    UShort    Number of total face entries
+0x06    UShort    Number of vertices
+0x08    UInt    Always seems to be 0x0000411c
+
+Next follows a table of face sections - 1 UShort per entry.  This is the number of face indices in each part.  They should add up to the total number of face entries in the header.
+
+Then follows the actual face index data - 1 Short per index value
+
+Then follows the vertex data - 0x34 bytes per entry as follows:
+
+* NOTE: Sometimes there is an extra 2 bytes before the vertex data starts - it doesn't seem to be for alignment purposes, so not sure how to calculate it automatically.
+
+0x00    Float    X Coord
+0x04    Float    Y Coord
+0x08    Float    Z Coord
+0x0c    ?
+0x10    ?
+0x14    ?
+0x18    ?
+0x1c    ?
+0x20    Float    Normal X
+0x24    Float    Normal Y
+0x28    Float    Normal Z
+0x2c    Float    UV X
+0x30    Float    UV Y
