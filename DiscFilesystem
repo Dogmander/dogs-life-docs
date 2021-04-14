@@ -1,0 +1,42 @@
+This document details what each file on the Dog's Life game disc is for. (This information is for the NTSC-U version [SLUS-21018], other versions may be different)
+
+FILES ON ROOT
+
+DOGS.DGF - material and shader parameters?
+
+ENGLISH.ZIP - Contains English language speech audio
+
+FDLOGO.PSS - Frontier Developments logo
+
+HIPLOGO.PSS - Hip Games logo
+
+IOPRP280.IMG -
+
+IRXFILES.DAT -
+
+LOGO.PSS - unused Frontier Developments logo, FDLOGO.PSS is used
+
+OVERLAY.ZIP - Contains game's .OVL files, MUSIC, STINGS, and SFX
+
+PRELOAD.DAT -
+
+RESSYM.TXT - file containing entire list of text, shape, texture, and other resources
+
+SLUS_210.18 - Game executable
+
+STREAMS.CFG -
+
+SYSTEM.CNF - standard PlayStation 2 launch parameters; video mode, version, and executable to boot
+
+FOLDERS
+
+INTRO - Contains INTROEN.PSS, game opening prerendered cutscene
+
+MEMCARD - contains memory card icon and other save related data
+
+OPTS - contains debug launch parameters for each level?
+
+
+
+
+
