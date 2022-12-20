@@ -1,0 +1,224 @@
+enum <byte> DATA_TYPE
+{
+  DT_TEXT, // 0
+  DT_TEXTURE, // 1
+  DT_FONT, // 2
+  DT_SHAPE, // 3
+  DT_SOUND, // 4
+  DT_CREATURE, // 5
+  DT_DOGSTALELAND, // 6
+  DT_ANIMATION, // 7
+  DT_SCRIPT, // 8
+  DT_NAVGRAPH, // 9
+  DT_MUSIC, // 10
+  DT_MAX, // 11
+};
+
+struct OVERLAY_UNKNOWN
+{
+  ushort unknown_0;
+  ushort unknown_1;
+};
+
+struct OVERLAY_DATA
+{
+  ushort element_count;
+  ushort unknown_count;
+  if (unknown_count > 0)
+  {
+    OVERLAY_UNKNOWN unknown[unknown_count];
+  }
+};
+
+string OverlayDataToString(OVERLAY_DATA& data)
+{
+  string comment;
+  SPrintf(comment, "data %d (%d)", data.element_count, data.unknown_count);
+  return comment;
+}
+
+struct OVERLAY_SEGMENT
+{
+  OVERLAY_DATA data[DT_MAX]<optimize=false,comment=OverlayDataToString>;
+};
+
+string OverlayIdToString(byte id)
+{
+  switch (id)
+  {
+    case 0: return "Editor";
+    case 1: return "Root";
+    case 2: return "NullBanners";
+    case 3: return "NullSection";
+    case 4: return "Banners";
+    case 5: return "Gem";
+    case 6: return "NullMain";
+    case 7: return "Main";
+    case 8: return "SaveIsland";
+    case 9: return "Hicksville";
+    case 10: return "SkiResort";
+    case 11: return "Town";
+    case 12: return "Hicksville_Farmhouse";
+    case 13: return "Hicksville_Watermill";
+    case 14: return "Hicksville_BigField";
+    case 15: return "Hicksville_VillageHouses";
+    case 16: return "Hicksville_Centre";
+    case 17: return "Hicksville_Centre_Cutscene";
+    case 18: return "Hicksville_ChickenFarm";
+    case 19: return "SkiResort_Cafe";
+    case 20: return "SkiResort_Cafe_Cutscene";
+    case 21: return "SkiResort_HighStreet";
+    case 22: return "SkiResort_SkiSlope";
+    case 23: return "SkiResort_MountainTop";
+    case 24: return "SkiResort_MountainSide";
+    case 25: return "SkiResort_Hotel";
+    case 26: return "Town_Station";
+    case 27: return "Town_Park";
+    case 28: return "Town_DogPound";
+    case 29: return "Town_Centre";
+    case 30: return "Town_Finale";
+    case 31: return "Town_Finale_Cutscene";
+    case 32: return "Town_Epilogue";
+    case 33: return "SI_LevelImage";
+    case 34: return "H_F_LevelImage";
+    case 35: return "H_F_LG_W_LevelImage";
+    case 36: return "H_F_LG_W_NUD_LevelImage";
+    case 37: return "H_F_LG_WW_LevelImage";
+    case 38: return "H_F_LG_WW_NUD_LevelImage";
+    case 39: return "H_F_LG_BF_LevelImage";
+    case 40: return "H_F_LG_BF_NUD_LevelImage";
+    case 41: return "H_F_LG_VH_LevelImage";
+    case 42: return "H_F_LG_VH_NUD_LevelImage";
+    case 43: return "H_W_LevelImage";
+    case 44: return "H_W_LG_FH_LevelImage";
+    case 45: return "H_W_LG_FH_NUD_LevelImage";
+    case 46: return "H_W_LG_FHW_LevelImage";
+    case 47: return "H_W_LG_FHW_NUD_LevelImage";
+    case 48: return "H_BF_LevelImage";
+    case 49: return "H_BF_LG_FH_LevelImage";
+    case 50: return "H_BF_LG_FH_NUD_LevelImage";
+    case 51: return "H_BF_LG_CF_LevelImage";
+    case 52: return "H_BF_LG_CF_NUD_LevelImage";
+    case 53: return "H_C_LevelImage";
+    case 54: return "H_C_LG_VH_LevelImage";
+    case 55: return "H_C_LG_VH_NUD_LevelImage";
+    case 56: return "H_CF_LevelImage";
+    case 57: return "H_CF_LG_BF_LevelImage";
+    case 58: return "H_CF_LG_BF_NUD_LevelImage";
+    case 59: return "H_VH_LevelImage";
+    case 60: return "H_VH_LG_FH_LevelImage";
+    case 61: return "H_VH_LG_FH_NUD_LevelImage";
+    case 62: return "H_VH_LG_C_LevelImage";
+    case 63: return "H_VH_LG_C_NUD_LevelImage";
+    case 64: return "S_C_LevelImage";
+    case 65: return "S_C_LG_HS_LevelImage";
+    case 66: return "S_C_LG_HS_NUD_LevelImage";
+    case 67: return "S_C_LG_SS_LevelImage";
+    case 68: return "S_C_LG_SS_NUD_LevelImage";
+    case 69: return "S_HS_LevelImage";
+    case 70: return "S_HS_LG_H_LevelImage";
+    case 71: return "S_HS_LG_H_NUD_LevelImage";
+    case 72: return "S_HS_LG_C_LevelImage";
+    case 73: return "S_HS_LG_C_NUD_LevelImage";
+    case 74: return "S_HS_LG_MT_LevelImage";
+    case 75: return "S_HS_LG_MT_NUD_LevelImage";
+    case 76: return "S_HS_LG_SS_LevelImage";
+    case 77: return "S_HS_LG_SS_NUD_LevelImage";
+    case 78: return "S_SS_LevelImage";
+    case 79: return "S_SS_LG_HS_LevelImage";
+    case 80: return "S_SS_LG_HS_NUD_LevelImage";
+    case 81: return "S_SS_LG_C_LevelImage";
+    case 82: return "S_SS_LG_C_NUD_LevelImage";
+    case 83: return "S_MT_LevelImage";
+    case 84: return "S_MT_LG_HS_LevelImage";
+    case 85: return "S_MT_LG_HS_NUD_LevelImage";
+    case 86: return "S_MT_LG_MS_LevelImage";
+    case 87: return "S_MT_LG_MS_NUD_LevelImage";
+    case 88: return "S_MS_LevelImage";
+    case 89: return "S_MS_LG_MT_LevelImage";
+    case 90: return "S_MS_LG_MT_NUD_LevelImage";
+    case 91: return "S_H_LevelImage";
+    case 92: return "S_H_LG_HS_LevelImage";
+    case 93: return "S_H_LG_HS_NUD_LevelImage";
+    case 94: return "T_C_LevelImage";
+    case 95: return "T_C_LG_P_LevelImage";
+    case 96: return "T_C_LG_P_NUD_LevelImage";
+    case 97: return "T_F_LevelImage";
+    case 98: return "T_F_LG_DP_LevelImage";
+    case 99: return "T_F_LG_DP_NUD_LevelImage";
+    case 100: return "T_DP_LevelImage";
+    case 101: return "T_DP_LG_P_LevelImage";
+    case 102: return "T_DP_LG_P_NUD_LevelImage";
+    case 103: return "T_DP_LG_F_LevelImage";
+    case 104: return "T_DP_LG_F_NUD_LevelImage";
+    case 105: return "T_P_LevelImage";
+    case 106: return "T_P_LG_C_LevelImage";
+    case 107: return "T_P_LG_C_NUD_LevelImage";
+    case 108: return "T_P_LG_DP_LevelImage";
+    case 109: return "T_P_LG_DP_NUD_LevelImage";
+    case 110: return "T_P_LG_S_LevelImage";
+    case 111: return "T_P_LG_S_NUD_LevelImage";
+    case 112: return "T_S_LevelImage";
+    case 113: return "T_S_LG_P_LevelImage";
+    case 114: return "T_S_LG_P_NUD_LevelImage";
+    case 115: return "Demo";
+  }
+  return "?unknown?";
+}
+
+struct OVERLAY
+{
+  byte overlay_id<comment=OverlayIdToString>;
+  OVERLAY_SEGMENT unknown_1;
+  OVERLAY_SEGMENT unknown_2;
+  OVERLAY_SEGMENT unknown_3;
+  OVERLAY_SEGMENT unknown_4;
+};
+
+string OverlayToString(OVERLAY& overlay)
+{
+  return OverlayIdToString(overlay.overlay_id);
+}
+
+enum <byte> OBJECT_TYPE { OT_OVERLAY, OT_UNKNOWN1, OT_UNKNOWN2 }; 
+
+struct OBJECT_ARRAY;
+struct OBJECT
+{
+  OBJECT_TYPE object_type;
+  switch (object_type)
+  {
+    case OT_OVERLAY: OVERLAY overlay<comment=OverlayToString>; break;
+    case OT_UNKNOWN1: OBJECT_ARRAY objects; break;
+    case OT_UNKNOWN2: OBJECT_ARRAY objects; break;
+    default: return "unsupported object type";
+  }
+};
+
+string ObjectToString(OBJECT& object)
+{
+  switch (object.object_type)
+  {
+    case OT_OVERLAY: return "Overlay: " + OverlayToString(object.overlay);
+  }
+  return "";
+}
+
+struct OBJECT_ARRAY
+{
+  byte object_count;
+  if (object_count > 0)
+  {
+    OBJECT object[object_count]<optimize=false,comment=ObjectToString>;
+  }
+};
+
+struct FILE_HEADER
+{
+  byte unknown_0;
+  byte unknown_1;
+  ushort data_total_counts[DT_MAX]<optimize=false>;
+  byte unknown_3;
+}
+header;
+OBJECT_ARRAY root;
